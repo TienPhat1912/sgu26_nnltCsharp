@@ -1,0 +1,11 @@
+.vscode
+
+Buoi02/
+*.docx
+
+bin/
+obj/
+
+.vs/
+*.user
+*.suo

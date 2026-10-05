@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/TUAN03/">
+    <Project Path="TUAN03/MinhHoaDaHinh_ConLib_ConsoleMenuLib/MinhHoaDaHinh_ConLib_ConsoleMenuLib.csproj" />
+    <Project Path="TUAN03/MinhHoaDaHinh_ConLib_TinhToanApp/MinhHoaDaHinh_ConLib_TinhToanApp.csproj" />
+  </Folder>
+</Solution>

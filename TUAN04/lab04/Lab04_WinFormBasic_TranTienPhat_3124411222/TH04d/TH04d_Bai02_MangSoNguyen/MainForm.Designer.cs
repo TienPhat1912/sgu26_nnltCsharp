@@ -1,0 +1,28 @@
+namespace TH04d_Bai02_MangSoNguyen;
+partial class MainForm
+{
+    private System.ComponentModel.IContainer? components=null;
+    private TextBox txtInput=null!,txtResult=null!,txtFind=null!,txtDelete=null!,txtAddValue=null!,txtAddIndex=null!,txtSum=null!,txtEven=null!,txtOdd=null!,txtMax=null!,txtMin=null!,txtReplaceTarget=null!,txtReplaceNew=null!;
+    private RadioButton rdoSortAsc=null!,rdoSortDesc=null!,rdoFindValue=null!,rdoFindIndex=null!,rdoDeleteValue=null!,rdoDeleteIndex=null!,rdoAdd=null!,rdoReplaceValue=null!,rdoReplaceIndex=null!;
+    private Button btnInput=null!,btnExecute=null!,btnSum=null!,btnMinMax=null!,btnReset=null!,btnExit=null!;private Label lblFindResult=null!;
+    protected override void Dispose(bool disposing){if(disposing)components?.Dispose();base.Dispose(disposing);}
+    private void InitializeComponent()
+    {
+        components=new System.ComponentModel.Container();
+        txtInput=new TextBox();txtResult=new TextBox();txtFind=new TextBox();txtDelete=new TextBox();txtAddValue=new TextBox();txtAddIndex=new TextBox();txtSum=new TextBox();txtEven=new TextBox();txtOdd=new TextBox();txtMax=new TextBox();txtMin=new TextBox();txtReplaceTarget=new TextBox();txtReplaceNew=new TextBox();
+        rdoSortAsc=new RadioButton();rdoSortDesc=new RadioButton();rdoFindValue=new RadioButton();rdoFindIndex=new RadioButton();rdoDeleteValue=new RadioButton();rdoDeleteIndex=new RadioButton();rdoAdd=new RadioButton();rdoReplaceValue=new RadioButton();rdoReplaceIndex=new RadioButton();
+        btnInput=new Button();btnExecute=new Button();btnSum=new Button();btnMinMax=new Button();btnReset=new Button();btnExit=new Button();lblFindResult=new Label();SuspendLayout();
+        var title=new Label{Text="Mảng Số Nguyên",Font=new Font("Segoe UI",18F,FontStyle.Bold),ForeColor=Color.Red,AutoSize=true,Left=230,Top=15};
+        btnInput.SetBounds(25,65,110,34);btnInput.Text="Nhập mảng";txtInput.SetBounds(145,68,395,27);btnReset.SetBounds(555,65,90,34);btnReset.Text="Reset";
+        var lres=new Label{Text="Kết quả mảng:",Left=25,Top=112,AutoSize=true};txtResult.SetBounds(145,108,395,27);txtResult.ReadOnly=true;btnExit.SetBounds(555,105,90,34);btnExit.Text="Thoát";btnExecute.SetBounds(25,152,110,44);btnExecute.Text="Thực hiện";
+        var gSort=new GroupBox{Text="Sắp xếp",Left=145,Top=145,Width=250,Height=70};rdoSortAsc.SetBounds(15,28,105,28);rdoSortAsc.Text="Tăng";rdoSortDesc.SetBounds(130,28,105,28);rdoSortDesc.Text="Giảm";gSort.Controls.AddRange([rdoSortAsc,rdoSortDesc]);
+        var gFind=new GroupBox{Text="Tìm kiếm",Left=25,Top=230,Width=300,Height=125};rdoFindValue.SetBounds(15,28,150,27);rdoFindValue.Text="Tìm giá trị";rdoFindIndex.SetBounds(15,62,150,27);rdoFindIndex.Text="Tìm vị trí";txtFind.SetBounds(170,43,105,27);lblFindResult.SetBounds(15,94,260,24);gFind.Controls.AddRange([rdoFindValue,rdoFindIndex,txtFind,lblFindResult]);
+        var gDel=new GroupBox{Text="Xóa",Left=345,Top=230,Width=300,Height=125};rdoDeleteValue.SetBounds(15,28,160,27);rdoDeleteValue.Text="Xóa theo giá trị";rdoDeleteIndex.SetBounds(15,62,160,27);rdoDeleteIndex.Text="Xóa theo vị trí";txtDelete.SetBounds(180,43,95,27);gDel.Controls.AddRange([rdoDeleteValue,rdoDeleteIndex,txtDelete]);
+        var gAdd=new GroupBox{Text="Thêm",Left=25,Top=370,Width=300,Height=125};rdoAdd.SetBounds(15,27,130,27);rdoAdd.Text="Thêm phần tử";var lav=new Label{Text="Giá trị",Left=15,Top=62,AutoSize=true};var lai=new Label{Text="Vị trí",Left=15,Top=94,AutoSize=true};txtAddValue.SetBounds(85,58,90,27);txtAddIndex.SetBounds(85,90,90,27);gAdd.Controls.AddRange([rdoAdd,lav,lai,txtAddValue,txtAddIndex]);
+        var gSum=new GroupBox{Text="Tổng",Left=345,Top=370,Width=300,Height=125};var ls1=new Label{Text="Tổng mảng",Left=15,Top=28,AutoSize=true};var ls2=new Label{Text="Tổng chẵn",Left=15,Top=60,AutoSize=true};var ls3=new Label{Text="Tổng lẻ",Left=15,Top=92,AutoSize=true};txtSum.SetBounds(100,24,80,27);txtEven.SetBounds(100,56,80,27);txtOdd.SetBounds(100,88,80,27);foreach(var t in new[]{txtSum,txtEven,txtOdd})t.ReadOnly=true;btnSum.SetBounds(195,35,80,65);btnSum.Text="Tổng";gSum.Controls.AddRange([ls1,ls2,ls3,txtSum,txtEven,txtOdd,btnSum]);
+        var gMM=new GroupBox{Text="Max - Min",Left=25,Top=510,Width=300,Height=120};var lmax=new Label{Text="Lớn nhất",Left=15,Top=32,AutoSize=true};var lmin=new Label{Text="Nhỏ nhất",Left=15,Top=72,AutoSize=true};txtMax.SetBounds(95,28,85,27);txtMin.SetBounds(95,68,85,27);txtMax.ReadOnly=true;txtMin.ReadOnly=true;btnMinMax.SetBounds(195,32,80,62);btnMinMax.Text="Tìm";gMM.Controls.AddRange([lmax,lmin,txtMax,txtMin,btnMinMax]);
+        var gRep=new GroupBox{Text="Thay thế",Left=345,Top=510,Width=300,Height=120};rdoReplaceValue.SetBounds(15,27,145,27);rdoReplaceValue.Text="Theo giá trị";rdoReplaceIndex.SetBounds(15,57,145,27);rdoReplaceIndex.Text="Theo vị trí";txtReplaceTarget.SetBounds(165,28,105,27);var lnew=new Label{Text="Số thay thế",Left=15,Top=90,AutoSize=true};txtReplaceNew.SetBounds(165,86,105,27);gRep.Controls.AddRange([rdoReplaceValue,rdoReplaceIndex,txtReplaceTarget,lnew,txtReplaceNew]);
+        btnInput.Click+=btnInput_Click;btnExecute.Click+=btnExecute_Click;btnSum.Click+=btnSum_Click;btnMinMax.Click+=btnMinMax_Click;btnReset.Click+=btnReset_Click;btnExit.Click+=btnExit_Click;
+        ClientSize=new Size(675,655);Controls.AddRange([title,btnInput,txtInput,btnReset,lres,txtResult,btnExit,btnExecute,gSort,gFind,gDel,gAdd,gSum,gMM,gRep]);Font=new Font("Segoe UI",9.5F);StartPosition=FormStartPosition.CenterScreen;Text="Mảng Số Nguyên";FormClosing+=MainForm_FormClosing;ResumeLayout(false);PerformLayout();
+    }
+}
